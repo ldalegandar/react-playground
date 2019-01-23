@@ -1,0 +1,119 @@
+.lx-grid-container {
+  display: grid;
+  grid-auto-flow: row dense;
+  justify-content: center;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 32px;
+  padding-bottom: 32px;
+
+  .lx-grid-item {
+    height: 100%;
+    min-height: 320px;
+    grid-column: span 6;
+    grid-row: span 2;
+
+    @for $i from 1 through 12 {
+      &.col-size-#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+    &.col-size-full {
+      grid-column: span 12;
+    }
+    &.col-size-half {
+      grid-column: span 6;
+    }
+    &.col-size-third {
+      grid-column: span 4;
+    }
+    &.col-size-two-thirds {
+      grid-column: span 8;
+    }
+
+    &.row-height-half {
+      min-height: 160px;
+      grid-row: span 1;
+    }
+    &.row-height-double {
+      min-height: 640px;
+      grid-row: span 4;
+    }
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .lx-grid-container {
+    .lx-grid-item {
+      @for $i from 1 through 12 {
+        &.col-size-medium-#{$i} {
+          grid-column: span #{$i};
+        }
+      }
+
+      &.col-size-medium-full {
+        grid-column: span 12;
+      }
+      &.col-size-medium-half {
+        grid-column: span 6;
+      }
+      &.col-size-medium-third {
+        grid-column: span 4;
+      }
+      &.col-size-medium-two-thirds {
+        grid-column: span 8;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 960px) {
+  .lx-grid-container {
+    grid-gap: 24px;
+    .lx-grid-item {
+      @for $i from 1 through 12 {
+        &.col-size-small-#{$i} {
+          grid-column: span #{$i};
+        }
+      }
+
+      &.col-size-small-full {
+        grid-column: span 12;
+      }
+      &.col-size-small-half {
+        grid-column: span 6;
+      }
+      &.col-size-small-third {
+        grid-column: span 4;
+      }
+      &.col-size-small-two-thirds {
+        grid-column: span 8;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .lx-grid-container {
+    grid-gap: 16px;
+    .lx-grid-item {
+      @for $i from 1 through 12 {
+        &.col-size-xsmall-#{$i} {
+          grid-column: span #{$i};
+        }
+      }
+
+      &.col-size-xsmall-full {
+        grid-column: span 12;
+      }
+      &.col-size-xsmall-half {
+        grid-column: span 6;
+      }
+      &.col-size-xsmall-third {
+        grid-column: span 4;
+      }
+      &.col-size-xsmall-two-thirds {
+        grid-column: span 8;
+      }
+    }
+  }
+}

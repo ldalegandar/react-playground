@@ -1,0 +1,56 @@
+.app-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 58px;
+  // background-color: #2b2573;
+  background-color: var(--background-1);
+  box-shadow: var(--heavy-shadow);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  padding-left: 13px;
+
+  .app-bar-title {
+    font-family: "Montserrat Alternates", sans-serif;
+    color: #fff;
+    font-size: 24px;
+    margin-left: 15px;
+    margin-bottom: 2px;
+    padding: 8px 0;
+    .app-bar-title-highlight {
+      // color: #75E7F4
+      color: var(--dashboard-1);
+    }
+  }
+
+  .app-bar-subtitle {
+    color: var(--text-4);
+    margin-left: 10px;
+    font-weight: 400;
+  }
+
+  .logo {
+    background-image: url("../../assets/logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .app-bar {
+    padding-left: 4px;
+
+    .app-bar-title {
+      margin-left: 0;
+    }
+
+    .logo,
+    .app-bar-subtitle {
+      display: none;
+    }
+  }
+}

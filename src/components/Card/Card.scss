@@ -1,0 +1,33 @@
+.report-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .report-card-title {
+    font-size: 16px;
+    color: var(--text-4);
+    padding: 0 0 6px 2px;
+  }
+
+  .report-card-content {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: var(--widget-shadow);
+    padding: 15px;
+    flex-grow: 1;
+    position: relative;
+
+    &.centered-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &.theme-1 {
+    .report-card-content {
+      background-color: var(--dashboard-2);
+      color: var(--background-6);
+    }
+  }
+}
